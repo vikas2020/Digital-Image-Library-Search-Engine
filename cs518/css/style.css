@@ -1,0 +1,204 @@
+body{
+  font-family: arial;
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding:0;
+  margin: 0;
+}
+h1{
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 40px;
+  padding: 5px 25px;
+  border-radius: 40px;
+  margin: 0 0 30px;
+  display: inline-block;
+}
+
+#header{
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 15px;
+}
+
+#header:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#header .header-links{
+  float: right;
+}
+
+#header a{
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+#header a:hover{
+  color: #fff;
+}
+
+#content{
+  padding: 100px 250px;
+  text-align: center;
+}
+
+#content .searchBox input{
+  width: 80%;
+  height: 20px;
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+#content .btn{
+  color: #fff;
+  background-color: #6C5CE7;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+
+#content .loginForm{
+  text-align: left;
+  width: 500px;
+  margin: 0  auto;
+  padding: 30px 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+#content .loginForm .form-group{
+  text-align: left;
+  padding: 0 20px;
+  margin: 0 0 20px;
+}
+#content .loginForm .form-group label{
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+  width: 150px;
+  display: inline-block;
+
+}
+#content .loginForm .form-group input{
+  display: inline-block;
+  width: 290px;
+  height: 20px;
+}
+#content .loginForm .btn{
+ margin: 0 0 0 165px; 
+ display: block;
+}
+
+
+.already-have{
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.already-have a{
+  color: #6C5CE7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.already-have a:hover{
+ text-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.modify,
+.forgot,
+.dont-have{
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  width: 49%;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.forgot{
+  text-align: right;
+}
+
+.modify a,
+.forgot a,
+.dont-have a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.forgot a:hover,
+.dont-have a:hover{
+  text-decoration: underline;
+}
+
+#content .modify .btn{
+  display: inline-block;
+}
+
+.message{
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 20px auto 0;
+}
+.message.error{
+  color: #fff;
+  background-color: red;  
+}
+.message.success{
+  color: #fff;
+  background-color: green;  
+}
+
+.to-login{
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #6C5CE7;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  padding: 10px 5px;
+  margin: 50px auto 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.to-login:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+table{
+  color: #fff;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
