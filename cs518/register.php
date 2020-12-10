@@ -43,9 +43,16 @@
             </form>
             
             <?php
-
-                if(isset($_POST["submit"])){
-                    $m = is_int($_POST['mobile']);
+			
+			
+			
+			
+			
+			
+			
+			
+			if(isset($_POST["submit"])){
+                    //$m = is_int($_POST['mobile']);
                     if($_POST['first_name'] == ''){
 
                        echo '<div class="message error">Please Fill All The Fields.</div>';
@@ -62,7 +69,7 @@
 
                         echo '<div class="message error">Please Fill All The Fields.</div>';
 
-                    }else if($_POST['mobile'] == '' || $m){
+                    }else if($_POST['mobile'] == '' ){
 
                         echo '<div class="message error">Please Fill Correct Number.</div>';
 
@@ -73,6 +80,8 @@
                         $username = $_POST['email'];
                         $password = md5($_POST['password']);
                         $mobile = $_POST['mobile'];
+						$token = bin2hex(random_bytes(15));
+						
                             // check email address is exists in db
                         $sql1 = 'SELECT email_address FROM users WHERE email_address="'.$username.'"';
                         $result1 = mysqli_query($conn, $sql1);
@@ -83,12 +92,47 @@
 
                         }else{
                                 // if not exists
-                            $sql = "INSERT INTO users(first_name,last_name,email_address,password,mobile) VALUES ('{$first_name}','{$last_name}', '{$username}', '{$password}','{$mobile}')";
+						$sql = "INSERT INTO users(first_name,last_name,email_address,password,mobile,token,status) VALUES ('$first_name','$last_name', '$username', '$password','$mobile','$token','inactive')";
                             $result = mysqli_query($conn,$sql);
                             if($result == '1'){
+								$to_email = "vchhillar1985@gmail.com";
+								$subject = "Email Verification for IMAGE SEARCH ENGINE ";
+								$body = "Hi $first_name, Click here to activate your account
+								http://localhost/cs518/activate.php?token=$token ";
+								$sender_email = "From: noreply_Admin(Image Search)";
 
-                                echo '<div class="message success">Registered Successfully Please login again.
-                                </div>';
+							if (mail($username, $subject, $body, $sender_email)) {
+								$_SESSION['msg'] = "Please check your inbox for activation $username";
+								header('location:login.php');
+							
+							
+							
+							
+							
+							
+							
+							} else {
+								echo "Email sending failed...";		
+
+							}
+                                //echo '<div class="message success">Registered Successfully Please login again.
+                               
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
 
 
                             }
