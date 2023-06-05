@@ -1,4 +1,4 @@
-# CS518-web-programming
+# Digital Image Library Search Engine CS 518
 * Digital Image Library Search Engine (Spring 2020)
 
 * Developed and deployed an online search engine that allows users to search different images, create/edit/save profiles, save/edit/like/dislike different images to their profiles using Elastic Search, PHP and JSON.
